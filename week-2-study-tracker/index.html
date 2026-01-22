@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Study Session Tracker</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Study Tracker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="container">
-    <h1>📚 Study Session Tracker</h1>
-    <p class="subtitle">Track focused study time with precision</p>
+    <h1>📚 Smart Study Tracker</h1>
+    <p class="subtitle">Track your focus, pause/resume, see your history</p>
 
     <div class="timer" id="timer">00:00:00</div>
 
     <div class="buttons">
       <button id="startBtn">Start</button>
+      <button id="pauseBtn" disabled>Pause</button>
       <button id="stopBtn" disabled>Stop</button>
       <button id="resetBtn">Reset</button>
+      <button id="darkModeBtn">🌙 Dark Mode</button>
     </div>
 
-    <p class="info" id="infoText">Click start to begin a study session.</p>
+    <p class="info" id="infoText">Click start to begin your session.</p>
+
+    <h3>Session History (Last 5)</h3>
+    <ul id="historyList"></ul>
+
+    <p>Total today: <span id="totalTime">00:00:00</span></p>
   </div>
 
   <script src="script.js"></script>
