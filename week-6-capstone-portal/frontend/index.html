@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capstone Interactive Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <h1>🚀 Capstone Dashboard</h1>
+  <button id="toggleMode">🌙 Dark Mode</button>
+</header>
+
+<main class="dashboard">
+
+  <!-- Editable Cards -->
+  <section class="cards">
+    <div class="card editable" data-type="clients">
+      <h2>Clients</h2>
+      <p id="clientCount">0 active clients</p>
+      <input type="text" placeholder="Add client" id="newClient">
+      <button id="addClient">Add</button>
+    </div>
+    <div class="card editable" data-type="projects">
+      <h2>Projects</h2>
+      <p id="projectCount">0 ongoing projects</p>
+      <input type="text" placeholder="Add project" id="newProject">
+      <button id="addProject">Add</button>
+    </div>
+    <div class="card editable" data-type="payments">
+      <h2>Payments</h2>
+      <p id="paymentTotal">Ksh 0 received</p>
+      <input type="number" placeholder="Add amount" id="newPayment">
+      <button id="addPayment">Add</button>
+    </div>
+  </section>
+
+  <!-- Task Manager -->
+  <section class="form-section">
+    <h2>Manage Tasks</h2>
+    <form id="taskForm">
+      <input type="text" placeholder="Task Name" required>
+      
+      <select id="taskPriority">
+        <option value="High">High Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="Low">Low Priority</option>
+      </select>
+
+      <select id="taskClient">
+        <option value="">Select Client</option>
+      </select>
+
+      <select id="taskProject">
+        <option value="">Select Project</option>
+      </select>
+
+      <!-- NEW: Payment input for task -->
+      <input type="number" id="taskPayment" placeholder="Ksh Amount for Task" min="0">
+
+      <button type="submit">Add Task</button>
+    </form>
+    <ul id="taskList"></ul>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

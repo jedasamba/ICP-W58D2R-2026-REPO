@@ -1,0 +1,80 @@
+/* Reset & basic */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  min-height:100vh;
+  transition: all 0.5s;
+  color:#222;
+}
+
+/* Header */
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 2rem;
+  font-family:'Poppins', sans-serif;
+  color:white;
+}
+header button {
+  padding:0.5rem 1rem;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  background: rgba(255,255,255,0.2);
+  color:white;
+  font-weight:bold;
+  transition: 0.3s;
+}
+header button:hover { background: rgba(255,255,255,0.4); }
+
+/* Dashboard */
+.dashboard { display:flex; flex-direction:column; align-items:center; padding:2rem; }
+
+/* Cards */
+.cards { display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:center; margin-bottom:2rem; }
+.card {
+  background: rgba(255,255,255,0.95);
+  padding:1.5rem 2rem;
+  border-radius:16px;
+  min-width:220px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  transition:all 0.3s;
+}
+.card:hover { transform:translateY(-5px); box-shadow:0 15px 35px rgba(0,0,0,0.25); }
+.card h2 { font-family:'Montserrat', sans-serif; margin-bottom:0.5rem; color:#333; }
+.card input { margin-top:0.5rem; padding:0.4rem 0.8rem; border-radius:6px; border:1px solid #ccc; width:100%; }
+.card button { margin-top:0.5rem; padding:0.4rem 0.8rem; border:none; border-radius:6px; background:#6a11cb; color:white; cursor:pointer; width:100%; }
+.card button:hover { transform:scale(1.05); }
+
+/* Form Section */
+.form-section {
+  width:100%; max-width:600px;
+  background: rgba(255,255,255,0.95);
+  padding:2rem;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+.form-section h2 { font-family:'Montserrat', sans-serif; margin-bottom:1rem; }
+form { display:flex; flex-wrap:wrap; gap:0.5rem; }
+form input, form select { flex:1; padding:0.5rem 1rem; border:2px solid #ddd; border-radius:8px; }
+form button { padding:0.5rem 1rem; border:none; border-radius:8px; background:linear-gradient(135deg,#6a11cb,#2575fc); color:white; font-weight:bold; cursor:pointer; }
+form button:hover { transform:scale(1.05); }
+
+/* Task List */
+#taskList { list-style:none; margin-top:1rem; }
+#taskList li { background: rgba(255,255,255,0.85); padding:0.75rem 1rem; border-radius:10px; margin-bottom:0.5rem; display:flex; justify-content:space-between; flex-wrap:wrap; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
+
+/* Dark Mode */
+body.dark {
+  background: linear-gradient(135deg,#1a1a2e,#162447);
+  color:#eee;
+}
+body.dark .card, body.dark .form-section, body.dark #taskList li {
+  background: rgba(50,50,70,0.95);
+  color:#eee;
+}
+body.dark input, body.dark select { background: #333; color: #eee; border-color:#555; }
+body.dark button { color:white; }
