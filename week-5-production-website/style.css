@@ -1,0 +1,49 @@
+/* Base Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+
+body {
+  background: #fdf6f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header & Nav */
+header { background: #1a1a1a; padding: 15px 20px; position: sticky; top: 0; z-index: 10; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { color: #ff6b6b; font-size: 1.8rem; font-weight: bold; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 20px; }
+.nav-links a { color: #fdf6f0; text-decoration: none; transition: 0.3s; }
+.nav-links a:hover { color: #ff6b6b; }
+
+/* Hero */
+.hero { background: linear-gradient(120deg, #ff9a9e, #fad0c4); padding: 100px 20px; text-align: center; }
+.hero h2 { font-size: 2.2rem; margin-bottom: 15px; color: #333; }
+.hero p { font-size: 1.1rem; margin-bottom: 20px; }
+.btn-primary {
+  background: #1a1a1a; color: #ff6b6b; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s;
+}
+.btn-primary:hover { background: #333; transform: translateY(-2px); }
+
+/* About */
+.about { padding: 60px 20px; max-width: 800px; margin: auto; text-align: center; }
+.about h2 { color: #ff6b6b; margin-bottom: 15px; }
+
+/* Services */
+.services { background: #fff3e6; padding: 60px 20px; text-align: center; }
+.services h2 { color: #ff6b6b; margin-bottom: 25px; }
+.cards { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+.card {
+  background: #fff; padding: 20px; border-radius: 15px; width: 250px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 15px 25px rgba(0,0,0,0.15); }
+
+/* Contact */
+.contact { padding: 60px 20px; display: flex; justify-content: center; }
+.contact-card { background: #fff; padding: 30px; border-radius: 15px; width: 100%; max-width: 500px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.contact-card input, .contact-card textarea { width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ccc; }
+.contact-card button { width: 100%; }
+
+/* Footer */
+footer { background: #1a1a1a; color: #fdf6f0; text-align: center; padding: 15px 0; margin-top: 40px; }
